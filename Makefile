@@ -9,7 +9,7 @@ all: copyenv
 	${DOCKER_COMPOSE} up -d
 
 copyenv:
-	cp /home/kevin/.testenv ./srcs/.env
+	cp /home/kevin/.testenv .env
 
 ls:
 	${DOCKER} ps -a
@@ -36,7 +36,7 @@ clean:	down
 
 fclean: 		clean
 	${DOCKER} system prune -f
-	rm -rf ./srcs/.env
+	rm -rf .env
 
 re:				fclean all
 
